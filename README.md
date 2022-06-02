@@ -41,7 +41,7 @@ pip install -r requirements.txt
 ## Training Vs-Net
 
 * **We provide a demo train set (`./Datasets`), which contains about 5000 cropped LR-HR LF-image pairs of mitochondrial samples. More extensive data pairs can be found in our proposed Bio-LFSR dataset (https://doi.org/10.5281/zenodo.6580895)**
-* **Download the train sets and unzip them to `./Datasets/`. Place the label HR dataset in `./Datasets/train_HR` and the LR dataset in `./Datasets/train_LR`. **
+* **Download the train sets and unzip them to `./Datasets/`. Place the label HR dataset in `./Datasets/train_HR` and the LR dataset in `./Datasets/train_LR`.**
 * **To start training demo the model, run**
 ```bash
 python train.py
