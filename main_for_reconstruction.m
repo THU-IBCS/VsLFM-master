@@ -66,6 +66,7 @@ Xguess = deconvRL(maxIter, Xguess,WDF, psf, weight, DAO, Nb, GPUcompute);
 ttime = toc;
 
 % Save high-resolution reconstructed volume
+mkdir('Data/Reconstruction');
 imwriteTFSK(single(gather(Xguess(545:1295,20:1260,21:51))),['Data/Reconstruction/mito_Recon.tif']);  %% crop volume edge and save it
 
 
