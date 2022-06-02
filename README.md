@@ -71,7 +71,7 @@ python test.py
 
 The maximum intensity projections of a fixed L929 cell with mitochondria labelling (TOM20-GFP) by LFM and VsLFM are exhibited below. For more results and further analysis, please refer to the companion paper where this method first occurred [[paper]](unavaiable now)
 
-<img src="images/Result.jpg">
+<img src="images/Results.jpg">
 
 # Citation
 
