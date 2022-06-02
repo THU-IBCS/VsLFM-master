@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 ## Training Vs-Net
 
-* **We provide a demo train set (`./Datasets`), which contains about 5000 cropped LR-HR LF-image pairs of mitochondrial samples. More extensive data pairs can be found in our proposed Bio-LFSR dataset (需要补充一个数据集链接)**
+* **We provide a demo train set (`./Datasets`), which contains about 5000 cropped LR-HR LF-image pairs of mitochondrial samples. More extensive data pairs can be found in our proposed Bio-LFSR dataset (https://doi.org/10.5281/zenodo.6580895)**
 * **Download the train sets and unzip them to `./Datasets/`. Place the label HR dataset in `./Datasets/train_HR` and the LR dataset in `./Datasets/train_LR`. 
 * **To start training demo the model, run**
 ```bash
@@ -71,8 +71,7 @@ python test.py
 
 The maximum intensity projections of a fixed L929 cell with mitochondria labelling (TOM20-GFP) by LFM and VsLFM are exhibited below. For more results and further analysis, please refer to the companion paper where this method first occurred [[paper]](unavaiable now)
 
-(Images/Result.jpg)
-
+<img src="images/Result.jpg">
 
 # Citation
 
