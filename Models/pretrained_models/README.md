@@ -1,1 +1,1 @@
-The pre-trained model is too large for GitHub, can be downloaded from https://drive.google.com/drive/folders/1GODKZQbbVRuzsYGxS5cMVC0FW2GOe8eF?usp=sharing.
+The pre-trained model is too large for GitHub, which can be downloaded from https://drive.google.com/drive/folders/1GODKZQbbVRuzsYGxS5cMVC0FW2GOe8eF?usp=sharing.
