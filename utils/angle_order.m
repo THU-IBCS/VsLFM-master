@@ -4,7 +4,7 @@ function [index1,index2] = angle_order(Nnum)
 % The Code is created based on the method described in the following paper 
 %   [1]  ZHI LU etc,
 %        "A practical guide to scanning light-field microscopy with digital adaptive optics"
-%        accepted by Nature Protocols, 2022
+%        Nature Protocols, 2022
 %
 %    Contact: ZHI LU (luz18@mails.tsinghua.edu.cn)
 %    Date  : 10/01/2021
