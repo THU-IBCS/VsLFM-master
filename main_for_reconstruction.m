@@ -1,7 +1,7 @@
 % 3D reconstruciton for VsLFM
 % The Code is created based on the method described in the following paper 
 %        ZHI LU, YU LIU etc.
-%        Virtual-scanning light-field microscopy for snapshot high-resolution volumetric imaging via deep learning
+%        Virtual-scanning light-field microscopy for robust snapshot high-resolution volumetric imaging
 %        Unpublished, 2022.
 % 
 %    Contact: ZHI LU (luz18@mails.tsinghua.edu.cn)
