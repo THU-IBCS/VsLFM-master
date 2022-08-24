@@ -30,8 +30,8 @@ There is no strict restrictions on the version of the platform. We recomand the 
 
 
 ## Building environment
-THe main required package version of this project is shown in `requirements.txt`. 
-You could pip the environment by running the following code.
+The main required package version of this project is shown in `requirements.txt`. 
+You could pip the environment by running the following code. The install time is less than an hour.
 ```bash
 pip install -r requirements.txt
 ```
