@@ -60,12 +60,24 @@ python test.py
 * **The SR results (`.tif` files) will be saved in `./Data/SR/`.**
 
 
-## 3D Reconstruction
+## 3D Reconstruction using iterative tomography
 
 * **Run the demo code named `main_for_reconstruction.m` using MATLAB.**
 * **The raw spatial-angular views captured by LFM should be placed in the folder of `Data/LR`. Here, we provide a mitochondrial labelled LF data as demo, which can be optionally enhanced by the Vs-Net described above.**
 * **The corresponding PSF file has been provided in the folder of `PSF`.**
 * **The final reconstruction results can be found in `Data/Reconstruction`.**
+
+## 3D Reconstruction using HyLFM-A-Net
+
+run demo code
+```bash
+python hylfm-a-net-demo.py
+```
+If your machine error with CUDA Out of Memory, try
+```bash
+python hylfm-a-net-demo.py --inp_size 51 --overlap 15
+```
+The input file path logic is same to iterative deconvolution, and the final reconstruction results can be found in `Data/SR_hylfmanetrecon`
 
 # Results
 
