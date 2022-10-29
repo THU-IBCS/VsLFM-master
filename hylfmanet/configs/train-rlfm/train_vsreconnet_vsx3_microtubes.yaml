@@ -1,0 +1,70 @@
+train_dataset:
+  dataset:
+    name: paired-image-folders
+    args:
+      root_path_1: /media/liuyv/test_microtube_1212_201-300/reSR_tif/
+      root_path_2: /media/liuyv/test_microtube_1212_201-300/GT/
+      repeat: 18
+      first_k: 20
+      last_k: 5
+      cache: in_memory
+  wrapper:
+    name: rlfm-vcdnet
+    args:
+      inp_size: 120
+      volume_depth : 101
+      # scale_max: 4
+      # augment: true
+      # sample_q: 2304
+  batch_size: 1
+
+val_dataset:
+  dataset:
+    name: paired-image-folders
+    args:
+      root_path_1: /media/liuyv/test_microtube_1212_201-300/reSR_tif/
+      root_path_2: /media/liuyv/test_microtube_1212_201-300/GT/
+      repeat: 1
+      first_k: 50
+      last_k: 1
+      cache: in_memory
+  wrapper:
+    name: rlfm-vcdnet
+    args:
+      inp_size: 120
+      volume_depth : 101
+      # scale_max: 4
+      # sample_q: 2304
+  batch_size: 1
+
+# data_norm:
+#   inp: {sub: [0.5], div: [0.5]}
+#   gt: {sub: [0.5], div: [0.5]}
+
+model:
+  name: rlfm
+  args:
+    encoder_spec:
+      name: vsreconnet
+      args:
+        inChannels : 169
+        outChannels : 101
+    # imnet_spec:
+    #   name: mlp
+    #   args:
+    #     out_dim: 3
+    #     hidden_list: [256, 256, 256, 256]
+
+optimizer:
+  name: adam
+  args:
+    lr: 1.e-4
+epoch_max: 400
+# multi_step_lr:
+#   milestones: [40, 80, 120, 160]
+#   gamma: 0.5
+
+loss_fn: 'nn.MSELoss()'
+
+epoch_val: 1
+epoch_save: 100
