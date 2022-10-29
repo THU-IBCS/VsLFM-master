@@ -1,0 +1,65 @@
+train_dataset:
+  dataset:
+    name: paired-image-folders
+    args:
+      root_path_1: /Your absolute path here/Data/SR/ # the input 3x3 scanning or vitual scanning light field data
+      root_path_2: /Your absolute path here/Data/Reconstruction/ # the volume reconstructed or paired from lf
+      repeat: 10
+      first_k: 9
+      last_k: 9 # means num 1-9 is training dataset
+      cache: in_memory
+  wrapper:
+    name: rlfm-vcdnet
+    args:
+      inp_size: 192
+      volume_depth : 101
+      # scale_max: 4
+      # augment: true
+      # sample_q: 2304
+  batch_size: 1
+
+val_dataset:
+  dataset:
+    name: paired-image-folders
+    args:
+      root_path_1: /Your absolute path here/Data/SR/ # the input 3x3 scanning or vitual scanning light field data
+      root_path_2: /Your absolute path here/Data/Reconstruction/ # the volume reconstructed or paired from lf
+      repeat: 1
+      first_k: 10
+      last_k: 1 # means num 10 is val dataset
+      cache: in_memory
+  wrapper:
+    name: rlfm-vcdnet
+    args:
+      inp_size: 192
+      volume_depth : 101
+      # scale_max: 4
+      # sample_q: 2304
+  batch_size: 1
+
+
+model:
+  name: rlfm
+  args:
+    encoder_spec:
+      name: vsreconnet
+      args:
+        inChannels : 169
+        outChannels : 101
+    # imnet_spec:
+    #   name: mlp
+    #   args:
+    #     out_dim: 3
+    #     hidden_list: [256, 256, 256, 256]
+
+optimizer:
+  name: adam
+  args:
+    lr: 1.e-4
+epoch_max: 400
+
+
+loss_fn: 'nn.MSELoss()'
+
+epoch_val: 1
+epoch_save: 100
