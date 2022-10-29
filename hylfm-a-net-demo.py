@@ -38,27 +38,27 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
-
+    # input path is before '_'
     files = get_all_abs_path(args.savefolder[0:args.savefolder.rfind('_')])
     if not os.path.exists(args.savefolder):
         os.mkdir(args.savefolder)
     for file in files:
         print(file)
         inputfile = file
-        lfstack = torch.tensor(np.array(imageio.volread(inputfile),dtype=np.float32))
+        lfstack = torch.tensor(np.array(imageio.volread(inputfile),dtype=np.float32)) # load vslfm data
 
         lfstack_low  = np.percentile(lfstack, 0.2) * 0
         lfstack_high = np.percentile(lfstack, 99.99)
         eps = 1e-3
 
-        lfstack = (lfstack - lfstack_low) / (lfstack_high - lfstack_low + eps)
+        lfstack = (lfstack - lfstack_low) / (lfstack_high - lfstack_low + eps) # normalization before network
 
 
         model = models.make(torch.load(args.model)['model'], load_sd=True).cuda()
         d, h, w = list(map(int, args.resolution.split(',')))
 
 
-        scale = h / lfstack.shape[1]
+        scale = h / lfstack.shape[1] # scale from vslfm height 459 to corresponding volume height 1989, scale
 
         inp_all = lfstack.unsqueeze(0)
 
@@ -81,7 +81,7 @@ if __name__ == '__main__':
         base = torch.zeros_like(ret)
 
         t0 = time.time()
-
+        # blocking to save GPU memory
         for h0 in [i*(inp_size-overlap) for i in range(1+ceil((inp_all.shape[-2]-inp_size)/(inp_size-overlap)))]:
             for w0 in [i*(inp_size-overlap) for i in range(1+ceil((inp_all.shape[-1]-inp_size)/(inp_size-overlap)))]:
                 inp = inp_all[:,:,h0:h0+inp_size,w0:w0+inp_size]
@@ -102,5 +102,6 @@ if __name__ == '__main__':
                 pred = None
         ret = ret / (base)
         print(time.time()-t0)
-        # imwrite(args.savefolder + inputfile[-inputfile[-1::-1].find('/'):][0:-4]+'_hylfmanet.tif',np.uint16(ret[30:61,960:960+751, 318:318+1241] * 2000), imagej=True, metadata={'axes': 'ZYX'}, compression ='zlib')
-        imwrite(args.savefolder + inputfile[-inputfile[-1::-1].find('/'):][0:-4]+'_hylfmanet.tif',np.uint16(ret[:,:, :] * 2000), imagej=True, metadata={'axes': 'ZYX'}, compression ='zlib')
+        # save ROI region to the disk
+        imwrite(args.savefolder + inputfile[-inputfile[-1::-1].find('/'):][0:-4]+'_hylfmanet.tif',np.uint16(ret[30:61,960:960+751, 318:318+1241] * 2000), imagej=True, metadata={'axes': 'ZYX'}, compression ='zlib')
+        # imwrite(args.savefolder + inputfile[-inputfile[-1::-1].find('/'):][0:-4]+'_hylfmanet.tif',np.uint16(ret[:,:, :] * 2000), imagej=True, metadata={'axes': 'ZYX'}, compression ='zlib')
