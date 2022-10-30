@@ -69,7 +69,7 @@ python test.py
 
 ## 3D Reconstruction using HyLFM-A-Net
 
-* **Run demo code**
+* **Run the demo code**
 ```bash
 python hylfm-a-net-demo.py
 ```
