@@ -20,7 +20,7 @@ More details please refer to the companion paper where this method first occurre
 * b). 1 or 2 NVIDIA RTX 2080 Ti GPUs or better
 
 ## Platform
-There is no strict restrictions on the version of the platform. We recomand the version of platform based on the configuration of NVIDIA RTX 2080 Ti GPU:
+There is no strict restrictions on the version of the platform. We recommend the version of platform based on the configuration of NVIDIA RTX 2080 Ti GPU:
 * a). Ubuntu 20.04
 * b). Python 3.7
 * c). Pytorch 1.5.0
