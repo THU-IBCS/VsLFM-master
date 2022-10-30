@@ -47,16 +47,15 @@ pip install -r requirements.txt
 python train.py
 ```
 
-You can also pass options at the command line:
-
+* **You can also pass options at the command line:**
 ```bash
 python train.py  --angRes 13   --channels 64  -- n_block  4   -- K 4  --model_name LFSR-model-13
 ```
-If data has different angular pixels (angRes=N), you should modify the parameter of angRes. Here, we give an example of dataset with angular views of 21: 
+* **If data has different angular pixels (angRes=N), you should modify the parameter of angRes. Here, we give an example of dataset with angular views of 21:**
 ```bash
 python train.py   --angRes 21  --channels 32 -- n_block  2  -- K 4  --trainset_dir ./Datasets21/   --model_name LFSR-model-21
 ```
-where the parameter of 'channels ' is set to either '64' or '32' , and the parameters of 'n_block' and 'K' are set to either '2', '3' or '4', dependent on the GPU number and memory.
+* **where the parameter of 'channels ' is set to either '64' or '32' , and the parameters of 'n_block' and 'K' are set to either '2', '3' or '4', dependent on the GPU number and memory.**
 * **Checkpoint models will be saved to `./Models/your_model_name/`.**
 
 
