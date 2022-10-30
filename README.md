@@ -68,7 +68,7 @@ python train.py \
     --trainset_dir ./Datasets21/ \
     --model_name LFSR-model-21
 ```
-where the number of 'channels ' is either '64' or '32' , the number of 'n_block'  and 'K'  is either '2' , '3' or '4' depends on the GPU number.
+where the number of 'channels ' is either '64' or '32' , the number of 'n_block'  and 'K'  is either '2' , '3' or '4' depends on the GPU number and memory.
 * **Checkpoint models will be saved to `./Models/your_model_name/`.**
 
 
