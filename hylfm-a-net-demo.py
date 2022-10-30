@@ -70,7 +70,7 @@ if __name__ == '__main__':
         overlap = int(args.overlap)
         overlapVolume = round(overlap * scale)
         if overlap:
-            edge = torch.sigmoid((torch.arange(overlapVolume) - overlapVolume//2 ) / overlapVolume * 15.0)
+            edge = torch.sigmoid((torch.arange(overlapVolume) - overlapVolume//2 )*1.0 / overlapVolume * 15.0)
             weight = torch.cat([edge, edge.max()*torch.ones(round(inp_size*scale) - 2*len(edge)),edge.flip(0)],dim=0).view(-1,1) @ \
                 torch.cat([edge, edge.max()*torch.ones(round(inp_size*scale) - 2*len(edge)),edge.flip(0)],dim=0).view(1,-1) + 1e-3
             weight = weight.unsqueeze(0) # 1,h,w
