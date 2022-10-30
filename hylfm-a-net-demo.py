@@ -103,5 +103,5 @@ if __name__ == '__main__':
         ret = ret / (base)
         print(time.time()-t0)
         # save ROI region to the disk
-        imwrite(args.savefolder + inputfile[-inputfile[-1::-1].find('/'):][0:-4]+'_hylfmanet.tif',np.uint16(ret[30:61,960:960+751, 318:318+1241] * 2000), imagej=True, metadata={'axes': 'ZYX'}, compression ='zlib')
+        imwrite(args.savefolder + inputfile[-inputfile[-1::-1].find('/'):][0:-4]+'_hylfmanet.tif',np.uint16(ret[36:36+31,960:960+751, 318:318+1241] * 2000), imagej=True, metadata={'axes': 'ZYX'}, compression ='zlib')
         # imwrite(args.savefolder + inputfile[-inputfile[-1::-1].find('/'):][0:-4]+'_hylfmanet.tif',np.uint16(ret[:,:, :] * 2000), imagej=True, metadata={'axes': 'ZYX'}, compression ='zlib')
