@@ -83,7 +83,7 @@ python test.py
 ```bash
 python hylfm-a-net-demo.py
 ```
-* **If your machine error with CUDA Out of Memory, try**
+* **If error with CUDA Out of Memory, try**
 ```bash
 python hylfm-a-net-demo.py --inp_size 51 --overlap 15
 ```
