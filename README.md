@@ -69,15 +69,15 @@ python test.py
 
 ## 3D Reconstruction using HyLFM-A-Net
 
-Run demo code
+* **Run demo code**
 ```bash
 python hylfm-a-net-demo.py
 ```
-If your machine error with CUDA Out of Memory, try
+* **If your machine error with CUDA Out of Memory, try**
 ```bash
 python hylfm-a-net-demo.py --inp_size 51 --overlap 15
 ```
-The input file path logic is same to iterative deconvolution, and the final reconstruction results can be found in `Data/SR_hylfmanetrecon`
+* **The input file path logic is same to iterative deconvolution, and the final reconstruction results can be found in `Data/SR_hylfmanetrecon`**
 
 # Results
 
