@@ -240,7 +240,7 @@ class Upsampling(nn.Module):
         out_sav_LR = LF_to_SAM(out_LR, self.angRes) 
         out_sav_SR = self.PixelShuffle(out_sav_LR)
         out_SR = self.FinalConv(out_sav_SR)
-        out_SR = SAM_to_SA(out_SR) 
+        out_SR = SAM_to_SA(out_SR, self.angRes) 
         return out_SR
 
 
