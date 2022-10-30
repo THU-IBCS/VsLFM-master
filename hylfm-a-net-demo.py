@@ -26,7 +26,7 @@ def get_all_abs_path(source_dir):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--savefolder', default="./Data/SR_hylfmanetrecon/")
-    parser.add_argument('--model', default='./Models/_train_vsreconnet_x3_12119cell-561-20211219-6_20221022/epoch-last.pth') # hylfmanet model to use
+    parser.add_argument('--model', default='./Models/_train_vsreconnet_x3_12119cell-488-20211219-6_20221029/epoch-last.pth') # hylfmanet model to use
     parser.add_argument('--resolution', default='101,1989,1989') # full resolution (depth, height, width) of target volume
     parser.add_argument('--gpu', default='0') # select a free gpu to use
     parser.add_argument('--inp_size', default=237) # model input size
