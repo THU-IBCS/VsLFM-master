@@ -27,10 +27,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--savefolder', default="./Data/SR_hylfmanetrecon/")
     parser.add_argument('--model', default='./Models/_train_vsreconnet_x3_12119cell-561-20211219-6_20221022/epoch-last.pth') # hylfmanet model to use
-    parser.add_argument('--resolution', default='101,1989,1989')
-    parser.add_argument('--gpu', default='0')
-    parser.add_argument('--inp_size', default=237)
-    parser.add_argument('--overlap', default=15)
+    parser.add_argument('--resolution', default='101,1989,1989') # full resolution (depth, height, width) of target volume
+    parser.add_argument('--gpu', default='0') # select a free gpu to use
+    parser.add_argument('--inp_size', default=237) # model input size
+    parser.add_argument('--overlap', default=15) # overlap, so the light field (169,459,459) is separate into 4 parts of size (169,237,237)
     # if your machine GPU memory is less than 24GB, then you can run
     # python rlfmdemo.py --inp_size 51 --overlap 15
     # to do reconstruction
