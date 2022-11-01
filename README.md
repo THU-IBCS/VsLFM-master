@@ -1,6 +1,6 @@
 # VsLFM-master
 
-Version:    3.0
+Version:    3.1
 
 Lisence: GNU General Public License v2.0
 
