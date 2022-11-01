@@ -52,10 +52,10 @@ def main(cfg):
     model = torch.load(pth_file_path[0])
     net.load_state_dict(model['state_dict'])
 
-    # Set patch parameters   | 3*patchsize - 2*overlap = image_size[2] | stride = patchsize-overlap
-    patchsize = 69                   # The cropped patches size
-    overlap = 27                           # the overlapping region of cropped the patches
-    stride = patchsize-overlap         # the stride of cropped patches
+    # Set patch parameters   | 3*patchsize - 2*(overlap//3) = image_size[2] | stride = patchsize-overlap//3a
+    patchsize = 69                   # The cropped LR patches size
+    overlap = 27*3                           # the overlapping region of cropped the SR patches, 3 is the upscale factor
+    stride = patchsize-overlap//3         # the stride of cropped LR patches, 3 is the upscale factor
 
     data_LR = tiff.imread(dir_images_tif)  # Size of [169,153,153]
 
