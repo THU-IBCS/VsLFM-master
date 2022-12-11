@@ -1,6 +1,6 @@
 ## HyLFM-A-Net
 
-For the problem of low computational efficiency in the second step of VsLFM, we developed a new end-to-end reconstruction network named HyLFM-A-Net, extended from the existing HyLFM-Net to show that our VsLFM is compatible with different reconstruction algorithms. Channel attention mechanism is embeded into the existing HyLFM-Net to replace iterative tomography for two orders of magnitude reduction in computational costs. But it should be noted that the robustness to sample aberrations will reduce relative to using iterative tomography, since all end-to-end networks do not consider the influence of optical aberrations.
+For the problem of low computational efficiency in the second step of VsLFM, we developed a new end-to-end reconstruction network named HyLFM-A-Net, extended from the existing HyLFM-Net to show that our VsLFM is compatible with different reconstruction algorithms. Channel attention mechanism is embeded into the existing HyLFM-Net to replace iterative tomography for two orders of magnitude reduction in computational costs. But it should be noted that the robustness to sample aberrations will reduce relative to using iterative tomography, since the end-to-end network does not consider the influence of optical aberrations.
 
 ### Preparation
 
