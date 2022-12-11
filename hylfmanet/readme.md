@@ -4,7 +4,7 @@ For the problem of low computational efficiency in the second step of VsLFM, we 
 
 ### Preparation
 
-The HyLFM-A-Net is used for accelerate reconstruction, whereby paired dataset is required. Users can obtain data pairs using iterative tomography on the Vs-Net output. 
+The HyLFM-A-Net is used for accelerate reconstruction, whereby paired dataset is required. Users can obtain training data pairs using iterative tomography on the Vs-Net output. 
 
 Some extra python packages are required:
 ```bash
@@ -19,11 +19,10 @@ The GPU memory of 24 GB is required, or some image crop operations should be con
 ### How to train
 
 We use yaml to manage different training options. Users should modify the 'yaml' in configs, and set the filepaths of training pairs. Then run:
-
 ```bash
 python train_rlfm.py --config ./configs/train-rlfm/train_vsreconnet_x3_mito_demo.yaml --tag 20221029 --gpu 0
 ```
-The code will automatically save the model parameters in '../save'. An pre-trained model can be found at 'VsLFM-master/Models/_train_vsreconnet_x3_12119cell-488-20211219-6_20221029/epoch-last.pth'
+The code will automatically save the model parameters in '../save'. A pre-trained model can be found in 'VsLFM-master/Models/_train_vsreconnet_x3_12119cell-488-20211219-6_20221029/epoch-last.pth'.
 
 ### How to track the training process
 ```bash
