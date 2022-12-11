@@ -4,7 +4,7 @@ For the problem of low computational efficiency in the second step of VsLFM, we 
 
 ### Preparation
 
-The HyLFM-A-Net is used for accelerate reconstruction, whereby paired dataset is required. Users can obtain training data pairs using iterative tomography on the Vs-Net output. 
+The HyLFM-A-Net is used to accelerate reconstruction through full-supervised network, whereby paired dataset is required for training. Users can obtain training data pairs using iterative tomography on the Vs-Net output. 
 
 Some extra python packages are required:
 ```bash
