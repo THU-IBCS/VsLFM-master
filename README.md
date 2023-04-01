@@ -100,7 +100,6 @@ The angular measurements and maximum intensity projections of a fixed L929 cell 
 If you use this code and relevant data, please cite the corresponding paper where original methods appeared:
 
 Lu, Z., et al. Virtual-scanning light-field microscopy for robust snapshot high-resolution volumetric imaging. Nat. Methods (2023). https://doi.org/10.1038/s41592-023-01839-6.
-[[paper]](https://www.nature.com/articles/s41592-023-01839-6)
 
 # Correspondence
 
