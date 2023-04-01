@@ -2,7 +2,7 @@
 % The Code is created based on the method described in the following paper 
 %        ZHI LU, YU LIU etc.
 %        Virtual-scanning light-field microscopy for robust snapshot high-resolution volumetric imaging
-%        Unpublished, 2022.
+%        Nature Methods, 2023.
 % 
 %    Contact: ZHI LU (luz18@mails.tsinghua.edu.cn)
 %    Date  : 06/01/2022
