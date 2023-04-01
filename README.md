@@ -10,7 +10,7 @@ We propose a virtual-scanning strategy based on deep neural network for light-fi
 
 As high-frequency information is mixed with the low-frequency information in each angular component up to the whole objective NA, high-resolution spatial information has the potential to be recovered by proper interaction and fusion of angular information.During network training, Vs-Net gradually gains virtual-scanning capacity, which endows VsLFM with high-resolution imaging performance highly comparable to scanning LFM, but only one unscanned light-field image is required. 
 
-More details please refer to the companion paper where this method first occurred [[paper]] (this link will be avaiable after paper publication). Next, we will guide you step by step to implement our method.
+More details please refer to the companion paper where this method first occurred [[paper]](https://www.nature.com/articles/s41592-023-01839-6). Next, we will guide you step by step to implement our method.
 
 
 # System Environment
