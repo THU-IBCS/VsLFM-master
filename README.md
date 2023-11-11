@@ -103,6 +103,6 @@ Lu, Z., et al. Virtual-scanning light-field microscopy for robust snapshot high-
 
 # Correspondence
 
-Should you have any questions regarding this code and the corresponding results, please contact Zhi Lu (luz18@mails.tsinghua.edu.cn). 
+Should you have any questions regarding this code and the corresponding results, please contact Zhi Lu (luzhi@tsinghua.edu.cn). 
 
 
